@@ -1,26 +1,31 @@
 # Operation Nightglass
-### Gearhead · Dead End Productions
 
-**v1beta candidate — build 0.26.1**
+A tactical stealth game by Dead End Productions. The native closed beta includes **51 missions across eight chapters**.
 
-An original squad-stealth game. Chapter I contains 20 playable missions; further chapters are in development.
+## Current release: beta2.31 (build 11031)
 
-## Download
+[Release notes and downloads](https://github.com/odium803-dot/operation-nightglass-releases/releases/tag/v1.1.0-beta2.31)
 
-- [Windows installer](https://github.com/odium803-dot/operation-nightglass-releases/releases/download/v0.26.1/operation-nightglass-0.26.1-windows-setup.exe)
-- [Linux installer](https://github.com/odium803-dot/operation-nightglass-releases/releases/download/v0.26.1/operation-nightglass-0.26.1-linux.run)
-- [Android APK](https://github.com/odium803-dot/operation-nightglass-releases/releases/download/v0.26.1/operation-nightglass-0.26.1-android.apk)
+- Windows: download the Windows portable ZIP, extract the entire folder, and launch Operation Nightglass.exe.
+- Linux: download the Linux portable ZIP, extract it, and launch operation-nightglass. Keep its PCK beside the executable.
+- Android: the test APK uses development signing; physical-device testing is pending.
+- Source: a sanitized Godot 4.7.2 project snapshot is included in the source ZIP.
 
-No GitHub account is needed to download or play. Windows/Android device testing is still pending.
+SHA256SUMS.txt provides package checksums. Native automatic installer updates are disabled; install from the release packages. The existing latest.json serves an older installer generation and is not the native beta download catalog.
 
-## Updating
+## What changed
 
-The game automatically checks signed release information after its opening and when returning to the foreground. Checks are cached for one day; **Updates → Check Now** checks immediately. If a newer version exists, the game notifies you and opens the installer download for your platform. It does not silently install over a running game. Offline checks never interrupt play.
+This release fixes the Chapter VI first-explosion shader stall and includes varied scenery, line-of-sight minimap contacts with faded last-seen markers, soldier-perspective binoculars, snow footprints, and rendering optimizations.
 
-Export a backup from **Saves & Backups**, close the game, then run the new installer. Keep the same install location/profile to retain local saves. Android updates require the same signing certificate. Earlier builds without update support need one manual install of this candidate.
+Both packaged resource sets passed checks that instantiate all 51 missions, and the Linux executable passed a headless boot check. These are not full human playthroughs or physical Windows/Android certification. See VALIDATION.txt and PACKAGE-CHECKS.txt in the release.
 
-## Camera controls
+A measured one-minute mission 43 run averaged 60.002 FPS, with a worst frame of 22.92 ms. A steady minimum 60 FPS across the campaign is **not yet certified**.
 
-**+ / −** or mouse wheel zooms. Middle-drag or Alt-left-drag pans; **Pan Map** also allows left-drag panning. **Home / Whole Map** fits the battlefield; **Squad** finds the team. The minimap can be dragged. On touch screens, drag to pan and pinch to zoom.
+Existing native save identity is preserved. Back up your saves before switching versions. This does not promise migration from the older browser game.
 
-This repository contains release downloads and signed metadata. No development signing keys or player saves are stored here.
+## Credits
+
+Thomas Bennett • Thomas Olson  
+Beta testing: Michael Bennett
+
+Engine and asset acknowledgements ship with the game.
